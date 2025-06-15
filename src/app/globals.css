@@ -20,12 +20,20 @@
     color: var(--foreground);
     font-family: var(--font-kodchasan), var(--font-inter), Arial, Helvetica, sans-serif;
   }
+  @keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
-/* Component layer — typography system */
-@layer components {
- 
-  p {
-    @apply text-lg font-normal leading-relaxed text-gray-700;
+@layer utilities {
+  .animated-gradient {
+    background: linear-gradient(270deg, #ff7eb3, #65d6ce, #ffc75f, #ff7eb3);
+    background-size: 600% 600%;
+    animation: gradient-x 10s ease infinite;
   }
+}
 }
