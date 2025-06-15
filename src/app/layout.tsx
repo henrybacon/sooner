@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${kodchasan.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased bg-animated-gradient bg-animated animate-gradient-x">{children}</body>
     </html>
   );
 }
